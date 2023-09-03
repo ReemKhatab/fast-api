@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 2
+names: ['Car', 'cars']
+
+roboflow:
+  workspace: yolotry-tnkhm
+  project: car-detection-ejfem
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/yolotry-tnkhm/car-detection-ejfem/dataset/1
