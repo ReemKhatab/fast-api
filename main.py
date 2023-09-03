@@ -36,13 +36,13 @@ app = FastAPI()
 
 
 base_dir=os.path.dirname(os.path.abspath(__file__))
-detect_dir=os.path.join(base_dir,"fastimage/detect")
-detected_dir=os.path.join(base_dir,"fastimage/detected")
+detect_dir=os.path.join(base_dir,"fastAPI/detect")
+detected_dir=os.path.join(base_dir,"fastAPI/detected")
 
 
 @smart_inference_mode()
 def run(
-        weights=ROOT / 'runs/train/exp10/weights/best.pt',  # model path or triton URL ree
+        weights=ROOT / 'fastAPI/best.pt',  # model path or triton URL ree
         source=ROOT/ 'mydatasets/license_plates/test/images/car3.jpg',  # file/dir/URL/glob/screen/0(webcam) ree
         data=ROOT / 'data/coco128.yaml',  # dataset.yaml path
         imgsz=(640, 640),  # inference size (height, width)
@@ -60,7 +60,7 @@ def run(
         augment=False,  # augmented inference
         visualize=False,  # visualize features
         update=False,  # update all models
-        project=ROOT / 'fastimage/detected',  # save results to project/name
+        project=ROOT / 'fastAPI/detected',  # save results to project/name
         name='exp',  # save results to project/name
         exist_ok=False,  # existing project/name ok, do not increment
         line_thickness=3,  # bounding box thickness (pixels)
